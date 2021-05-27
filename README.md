@@ -18,6 +18,21 @@ WHERE loginproperty([name], 'PasswordLastSetTime') <
 DATEADD(month,-6,GETDATE())
 ```
 
+**Find all logins where password is same as login**
+```
+SELECT SERVERPROPERTY('machinename') AS 'Server Name', name AS 'Login With
+Password Same As Name'
+FROM master.sys.sql_logins
+WHERE PWDCOMPARE(name,password_hash) = 1
+ORDER by name
+```
+
+**Find all logins with blank password**
+```
+SELECT name FROM sys.sql_logins
+WHERE PWDCOMPARE('', password_hash) = 1 ;
+```
+
 **Login property Funciton**
 
 [Login Function](https://docs.microsoft.com/en-us/sql/t-sql/functions/loginproperty-transact-sql?view=sql-server-ver15)
