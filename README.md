@@ -54,6 +54,15 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 
 `ALTER SERVER ROLE [<rolename>] DROP MEMBER [<login>];`
 
+**Grant Permissions**
+
+View all server permissions
+
+`SELECT * FROM sys.fn_builtin_permissions('') where class_desc = 'SERVER'`
+<https://docs.microsoft.com/en-us/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql?view=sql-server-ver15>
+
+
+
 **Login property Funciton**
 
 [Login Function](https://docs.microsoft.com/en-us/sql/t-sql/functions/loginproperty-transact-sql?view=sql-server-ver15)
