@@ -19,4 +19,5 @@ DATEADD(month,-6,GETDATE())
 ```
 
 **Login property Funciton**
+
 [Login Function](https://docs.microsoft.com/en-us/sql/t-sql/functions/loginproperty-transact-sql?view=sql-server-ver15)
