@@ -59,6 +59,7 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 View all server permissions
 
 `SELECT * FROM sys.fn_builtin_permissions('') where class_desc = 'SERVER'`
+
 <https://docs.microsoft.com/en-us/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql?view=sql-server-ver15>
 
 
