@@ -46,7 +46,11 @@ WHERE PWDCOMPARE('', password_hash) = 1 ;
 | setup admin | Can create linked servers |
 | dbcreator | Can create alter drop and restore databases |
 
+**Alter and Drop users from Roles**
 
+`ALTER SERVER ROLE [<rolename>] ADD MEMBER [<login>];`
+`ALTER SERVER ROLE [<rolename>] ADD MEMBER [<DOMAIN\name>];`
+`ALTER SERVER ROLE [<rolename>] DROP MEMBER [<login>];`
 
 **Login property Funciton**
 
